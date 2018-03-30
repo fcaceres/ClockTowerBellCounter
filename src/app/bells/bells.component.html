@@ -1,0 +1,33 @@
+<div style="text-align:center">
+  <h1>
+    {{ title }}!
+  </h1>
+  <img width="300" alt="clock" src="./assets/images/clock.png">
+
+
+<dl>
+  <dt>
+    <h2>
+      <label class="toplabel">Start-Time</label>
+     
+      <select type="number" name='myHour1' [(ngModel)]='myHour1'><option selected="selected">-Hour-</option><option type="number" *ngFor="let item of createRange(24); let myHour1 = index"> {{myHour1}} </option>  </select> :
+      <select type="number" name='myMins1' [(ngModel)]='myMins1'><option selected="selected">-Min-</option><option *ngFor="let item of createRange(60); let myMins1 = index"> {{myMins1}} </option>  </select> 
+    </h2>
+  </dt>
+  <dt>
+    <h2>
+      <label class="toplabel">End-Time</label>
+      <select type="number" name='myHour2' [(ngModel)]='myHour2'><option selected="selected">-Hour-</option><option type="number" *ngFor="let item of createRange(24); let myHour2 = index"> {{myHour2}} </option>  </select> :
+      <select type="number" name='myMins2' [(ngModel)]='myMins2'><option selected="selected">-Min-</option><option *ngFor="let item of createRange(60); let myMins2 = index"> {{myMins2}} </option>  </select> 
+    </h2>
+  </dt>
+  <dt>
+    <button (click)='Bellmagic()' class="addtimes">SET</button>
+    <h2>
+    <label class="toplabel">Number of times the bell rang</label>
+    <h2>{{Bellmagic()}}</h2>
+    </h2>
+  </dt>
+</dl>
+
+</div>
